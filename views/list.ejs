@@ -1,0 +1,32 @@
+<%- include("header") -%>
+
+    <div class="container">
+        <div class="heading">
+            <h1>My Todo List <span>checklist</span></h1>
+        </div>
+
+        <div class="box">
+            <% for(var i=0;i<newListItems.length;i++){ %>
+
+                <form class="item" action="/" method="post">
+                    <!-- <div class="item"> -->
+                    <div class="round">
+                        <input type="checkbox" name="checkbox" id="checkbox">
+                        <label for="checkbox" class="strikethrough">
+                            <%= newListItems[i] %>
+                        </label>
+                    </div>
+                    <br>
+                    <!-- </div> -->
+                </form>
+                <% } %>
+
+                    <form class="item" action="/" method="post">
+                        <input type="text" placeholder="new" name="n">
+                        <hr>
+                        <button id="b" type="submit">+</button>
+                    </form>
+        </div>
+
+
+    </div>
